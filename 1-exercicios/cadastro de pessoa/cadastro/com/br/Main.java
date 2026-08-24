@@ -1,4 +1,4 @@
-package paulo.com.br;
+package cadastro.com.br;
 
 import java.util.Locale;
 import java.util.Scanner;
