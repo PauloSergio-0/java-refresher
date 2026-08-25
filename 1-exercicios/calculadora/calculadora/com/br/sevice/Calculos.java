@@ -2,7 +2,7 @@ package calculadora.com.br.sevice;
 
 public class Calculos {
 
-    public Number adicao(Number numA, Number numB){
+    public static Number adicao(Number numA, Number numB){
 
             if(numA instanceof Integer a && numB instanceof Integer b ){
                 return a + b;
@@ -39,7 +39,7 @@ public class Calculos {
         return numA.doubleValue() / numA.doubleValue();
     }
 
-    public double raiz_quadrada(double numA){
+    public double raizQuadrada(double numA){
 
         return Math.sqrt(numA);
     }
