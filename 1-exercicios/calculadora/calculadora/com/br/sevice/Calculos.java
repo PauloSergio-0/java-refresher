@@ -2,23 +2,23 @@ package calculadora.com.br.sevice;
 
 public class Calculos {
 
-    public static Number adicao(Number numA, Number numB){
+    public static void adicao(Number numA, Number numB){
 
             if(numA instanceof Integer a && numB instanceof Integer b ){
-                return a + b;
+                System.out.println(a + b);
             }
 
-        return numA.doubleValue() + numA.doubleValue();
+        System.out.println(numA.doubleValue() + numA.doubleValue());
     }
 
 
-    public Number subtracao(Number numA, Number numB){
+    public static void subtracao(Number numA, Number numB){
 
             if(numA instanceof Integer a && numB instanceof Integer b ){
-                return a - b;
+                System.out.println(a - b);
             }
 
-        return numA.doubleValue() - numA.doubleValue();
+        System.out.println(numA.doubleValue() - numA.doubleValue());
     }
 
     public Number mutiplicacao(Number numA, Number numB){
