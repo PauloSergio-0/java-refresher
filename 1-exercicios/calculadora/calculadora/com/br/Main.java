@@ -12,26 +12,22 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
     public static int opcao;
 
-    public static Number adcionarNumero(String tipoOperacao ) {
+    public static Number adcionarNumero(String tipoOperacao) {
         while (true){
             try {
 
-                if (tipoOperacao.isEmpty()) {
+                System.out.println("digite numero" + tipoOperacao);
+                String numero = scanner.nextLine();
 
-                    System.out.println("digite numero: ");
-                    String numero = scanner.nextLine();
-
-                    if (numero.contains(".")) {
-                        double numeroReturn = Double.parseDouble(numero);
-                        return numeroReturn;
-                    } else {
-                        int numeroReturn = Integer.parseInt(numero);
-                        return numeroReturn;
-                    }
-
+                if (numero.contains(".")) {
+                    return Double.parseDouble(numero);
+                } else {
+                    return Integer.parseInt(numero);
                 }
+
             } catch (Exception e) {
                 System.out.println("Apenas números");
+
             }
         }
     }
@@ -48,25 +44,32 @@ public class Main {
                     0. Sair
                     """);
                 try {
-                    int opcao = scanner.nextInt();
-                    scanner.next();
-
+                    opcao = scanner.nextInt();
+                    scanner.nextLine();
                 }catch (Exception e){
                     System.out.println("\nOperação não permitida\nDigitar apenas números\n");
+                    scanner.nextLine();
                     continue;
                 }
 
                 if (opcao == 1){
-                    Calculos.adicao(adcionarNumero(": "), adcionarNumero(": "));
+                    Calculos.adicao(adcionarNumero("A: "), adcionarNumero("B: "));
 
+                } else if (opcao == 2) {
+                    Calculos.subtracao(adcionarNumero("A: "), adcionarNumero("B: "));
+                }else if (opcao == 3) {
+                    Calculos.mutiplicacao(adcionarNumero("A: "), adcionarNumero("B: "));
+                }else if (opcao == 4) {
+                    Calculos.divisao(adcionarNumero("A: "), adcionarNumero("B: "));
+                }else if (opcao == 5) {
+                    Calculos.raizQuadrada(adcionarNumero(": "));
                 } else if (opcao == 0) {
                     System.out.println("Saindo...");
                     break;
                 } else {
                     System.out.println("Operação não encontrada");
+
                 }
-
-
 
         }
     }

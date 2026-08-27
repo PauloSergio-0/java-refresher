@@ -6,9 +6,9 @@ public class Calculos {
 
             if(numA instanceof Integer a && numB instanceof Integer b ){
                 System.out.println(a + b);
+            }else {
+                System.out.println(numA.doubleValue() + numA.doubleValue());
             }
-
-        System.out.println(numA.doubleValue() + numA.doubleValue());
     }
 
 
@@ -16,32 +16,34 @@ public class Calculos {
 
             if(numA instanceof Integer a && numB instanceof Integer b ){
                 System.out.println(a - b);
+            } else {
+
+                System.out.println(numA.doubleValue() - numA.doubleValue());
             }
-
-        System.out.println(numA.doubleValue() - numA.doubleValue());
     }
 
-    public Number mutiplicacao(Number numA, Number numB){
+    public static void mutiplicacao(Number numA, Number numB){
 
         if(numA instanceof Integer a && numB instanceof Integer b ){
-            return a * b;
+            System.out.println(a * b);
+        } else {
+            System.out.println(numA.doubleValue() * numA.doubleValue());
         }
-
-        return numA.doubleValue() * numA.doubleValue();
     }
 
-    public Number divisao(Number numA, Number numB){
+    public static void divisao(Number numA, Number numB){
 
         if(numA instanceof Integer a && numB instanceof Integer b ){
-            return a / b;
-        }
+            System.out.println( a / b);
+        } else {
 
-        return numA.doubleValue() / numA.doubleValue();
+            System.out.println( numA.doubleValue() / numA.doubleValue());
+        }
     }
 
-    public double raizQuadrada(double numA){
+    public static void raizQuadrada(Number numA){
 
-        return Math.sqrt(numA);
+        System.out.println(Math.sqrt(Double.parseDouble(numA.toString())));
     }
 
 }
